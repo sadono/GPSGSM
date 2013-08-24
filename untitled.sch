@@ -95,7 +95,7 @@
 <smd name="6" x="0.635" y="3.0734" dx="0.6604" dy="2.032" layer="1" thermals="no"/>
 <smd name="4" x="1.905" y="-3.0734" dx="0.6604" dy="2.032" layer="1"/>
 <smd name="5" x="1.905" y="3.0734" dx="0.6604" dy="2.032" layer="1" thermals="no"/>
-<smd name="H" x="0" y="0" dx="3.81" dy="2.54" layer="1"/>
+<smd name="GND" x="0" y="0" dx="3.81" dy="2.54" layer="1"/>
 <text x="3.937" y="-2.032" size="1.27" layer="27" ratio="18" rot="R90">&gt;VALUE</text>
 <text x="-2.921" y="-1.905" size="1.27" layer="25" ratio="18" rot="R90">&gt;NAME</text>
 <rectangle x1="1.651" y1="1.9558" x2="2.159" y2="3.0988" layer="51"/>
@@ -127,6 +127,9 @@
 <pin name="SW" x="17.78" y="5.08" length="middle" direction="out" rot="R180"/>
 <pin name="FB" x="17.78" y="-5.08" length="middle" direction="in" rot="R180"/>
 </symbol>
+<symbol name="THERMAL">
+<pin name="THERMAL" x="0" y="0" length="middle" direction="pwr" rot="R90"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ST1S10" prefix="IC">
@@ -134,6 +137,7 @@
 step-down regulator</description>
 <gates>
 <gate name="G$1" symbol="ST1S10" x="0" y="0"/>
+<gate name="G$2" symbol="THERMAL" x="27.94" y="0" addlevel="request"/>
 </gates>
 <devices>
 <device name="PHR" package="HSOP8">
@@ -146,6 +150,7 @@ step-down regulator</description>
 <connect gate="G$1" pin="SYNC" pad="5"/>
 <connect gate="G$1" pin="VIN_A" pad="1"/>
 <connect gate="G$1" pin="VIN_SW" pad="6"/>
+<connect gate="G$2" pin="THERMAL" pad="GND"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8458,6 +8463,13 @@ distributor RS 193-8861887</description>
 <part name="JP11" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="SIM2" library="ICA-501" deviceset="ICA-501" device=""/>
 <part name="JP12" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="GND27" library="supply1" deviceset="GND" device=""/>
+<part name="JP13" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="JP14" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="JP15" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="JP16" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="JP17" library="pinhead" deviceset="PINHD-1X1" device=""/>
+<part name="JP18" library="pinhead" deviceset="PINHD-1X1" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8582,6 +8594,14 @@ distributor RS 193-8861887</description>
 <instance part="JP11" gate="G$1" x="-50.8" y="-81.28"/>
 <instance part="SIM2" gate="G$1" x="38.1" y="-45.72"/>
 <instance part="JP12" gate="G$1" x="-50.8" y="-91.44"/>
+<instance part="IC2" gate="G$2" x="-134.62" y="101.6" rot="R270"/>
+<instance part="GND27" gate="1" x="-134.62" y="99.06"/>
+<instance part="JP13" gate="G$1" x="-50.8" y="-101.6"/>
+<instance part="JP14" gate="G$1" x="-50.8" y="-111.76"/>
+<instance part="JP15" gate="G$1" x="-50.8" y="-121.92"/>
+<instance part="JP16" gate="G$1" x="-50.8" y="-132.08"/>
+<instance part="JP17" gate="G$1" x="-50.8" y="-142.24"/>
+<instance part="JP18" gate="G$1" x="-50.8" y="-152.4"/>
 </instances>
 <busses>
 </busses>
@@ -8833,6 +8853,30 @@ distributor RS 193-8861887</description>
 <wire x1="-15.24" y1="71.12" x2="-12.954" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="-12.954" y1="71.12" x2="-12.954" y2="74.422" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="IC2" gate="G$2" pin="THERMAL"/>
+<pinref part="GND27" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JP14" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-111.76" x2="-63.5" y2="-111.76" width="0.1524" layer="91"/>
+<label x="-63.5" y="-111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP15" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-121.92" x2="-63.5" y2="-121.92" width="0.1524" layer="91"/>
+<label x="-63.5" y="-121.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP16" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-132.08" x2="-63.5" y2="-132.08" width="0.1524" layer="91"/>
+<label x="-63.5" y="-132.08" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP17" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-142.24" x2="-63.5" y2="-142.24" width="0.1524" layer="91"/>
+<label x="-63.5" y="-142.24" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="+12V" class="0">
 <segment>
@@ -8860,6 +8904,16 @@ distributor RS 193-8861887</description>
 <wire x1="-205.74" y1="86.36" x2="-198.12" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="-198.12" y1="86.36" x2="-198.12" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-198.12" y1="93.98" x2="-190.5" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP13" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-101.6" x2="-63.5" y2="-101.6" width="0.1524" layer="91"/>
+<label x="-63.5" y="-101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP18" gate="G$1" pin="1"/>
+<wire x1="-53.34" y1="-152.4" x2="-63.5" y2="-152.4" width="0.1524" layer="91"/>
+<label x="-63.5" y="-152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
