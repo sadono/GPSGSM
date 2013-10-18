@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -14084,8 +14084,8 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 <wire x1="0" y1="2.55" x2="17" y2="2.55" width="0.127" layer="21"/>
 <wire x1="17" y1="-19.85" x2="0" y2="-19.85" width="0.127" layer="21"/>
 <wire x1="0" y1="2.55" x2="0" y2="-19.85" width="0.127" layer="21"/>
-<text x="5" y="5.54" size="1.27" layer="25">&gt;NAME</text>
-<text x="5" y="3.43" size="1.27" layer="27">&gt;VALUE</text>
+<text x="5" y="3" size="1.27" layer="25">&gt;NAME</text>
+<text x="5" y="-9.27" size="1.27" layer="27">&gt;VALUE</text>
 <wire x1="17" y1="2.55" x2="17" y2="-19.85" width="0.127" layer="21"/>
 <wire x1="1.1" y1="1.55" x2="1.1" y2="-18.85" width="0.127" layer="21"/>
 <wire x1="15.9" y1="1.55" x2="1.1" y2="1.55" width="0.127" layer="21"/>
@@ -14171,7 +14171,7 @@ Source: http://www.ledtronics.com/ds/smd-0603/Dstr0093.pdf</description>
 <wire x1="-12.7" y1="-22.86" x2="12.7" y2="-22.86" width="0.254" layer="94"/>
 <wire x1="12.7" y1="-22.86" x2="12.7" y2="20.32" width="0.254" layer="94"/>
 <wire x1="12.7" y1="20.32" x2="-12.7" y2="20.32" width="0.254" layer="94"/>
-<text x="-12.7" y="22.86" size="1.27" layer="94">&gt;NAME</text>
+<text x="-2.54" y="21.59" size="1.27" layer="94">&gt;NAME</text>
 <text x="-5.08" y="5.08" size="1.27" layer="94">&gt;VALUE</text>
 </symbol>
 </symbols>
@@ -14892,12 +14892,12 @@ distributor RS 193-8861887</description>
 <part name="X1" library="coaxCon" deviceset="ST-SMB-H" device=""/>
 <part name="SIM2" library="ICA-501" deviceset="ICA-501" device=""/>
 <part name="GND27" library="supply1" deviceset="GND" device=""/>
-<part name="JP13" library="pinhead" deviceset="PINHD-1X1" device=""/>
-<part name="JP18" library="pinhead" deviceset="PINHD-1X1" device=""/>
 <part name="C13" library="resistor" deviceset="C-EU" device="C0805" value="18p"/>
 <part name="GND38" library="supply1" deviceset="GND" device=""/>
 <part name="C14" library="rcl" deviceset="CPOL-EU" device="A/3216-18R"/>
 <part name="GND39" library="supply1" deviceset="GND" device=""/>
+<part name="R11" library="rcl" deviceset="R-EU_" device="R0805" value="150"/>
+<part name="R18" library="rcl" deviceset="R-EU_" device="R0805" value="150"/>
 </parts>
 <sheets>
 <sheet>
@@ -15012,7 +15012,7 @@ distributor RS 193-8861887</description>
 <instance part="R22" gate="G$1" x="-39.37" y="87.63" rot="R90"/>
 <instance part="GND36" gate="1" x="-39.37" y="80.01"/>
 <instance part="R23" gate="G$1" x="-44.45" y="92.71" rot="R180"/>
-<instance part="LED4" gate="G$1" x="-29.21" y="101.6"/>
+<instance part="LED4" gate="G$1" x="-29.21" y="104.14"/>
 <instance part="IC6" gate="G$1" x="-157.48" y="-58.42"/>
 <instance part="SV2" gate="1" x="-38.1" y="-35.56"/>
 <instance part="GND37" gate="1" x="-26.67" y="-45.72"/>
@@ -15021,12 +15021,12 @@ distributor RS 193-8861887</description>
 <instance part="SIM2" gate="G$1" x="38.1" y="-45.72"/>
 <instance part="IC2" gate="G$2" x="-134.62" y="101.6" rot="R270"/>
 <instance part="GND27" gate="1" x="-134.62" y="99.06"/>
-<instance part="JP13" gate="G$1" x="-50.8" y="-101.6"/>
-<instance part="JP18" gate="G$1" x="-50.8" y="-152.4"/>
 <instance part="C13" gate="G$1" x="69.85" y="-54.61"/>
 <instance part="GND38" gate="1" x="69.85" y="-62.23"/>
 <instance part="C14" gate="G$1" x="-17.78" y="-15.24"/>
 <instance part="GND39" gate="1" x="-17.78" y="-22.86"/>
+<instance part="R11" gate="G$1" x="-36.83" y="113.03"/>
+<instance part="R18" gate="G$1" x="26.67" y="106.68"/>
 </instances>
 <busses>
 </busses>
@@ -15318,16 +15318,6 @@ distributor RS 193-8861887</description>
 <wire x1="-198.12" y1="86.36" x2="-198.12" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="-198.12" y1="93.98" x2="-190.5" y2="93.98" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="JP13" gate="G$1" pin="1"/>
-<wire x1="-53.34" y1="-101.6" x2="-63.5" y2="-101.6" width="0.1524" layer="91"/>
-<label x="-63.5" y="-101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="JP18" gate="G$1" pin="1"/>
-<wire x1="-53.34" y1="-152.4" x2="-63.5" y2="-152.4" width="0.1524" layer="91"/>
-<label x="-63.5" y="-152.4" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
@@ -15449,9 +15439,9 @@ distributor RS 193-8861887</description>
 <wire x1="55.88" y1="127" x2="55.88" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="31.75" y1="99.06" x2="31.75" y2="102.87" width="0.1524" layer="91"/>
-<label x="31.75" y="102.87" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="19.05" y="106.68" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="21.59" y1="106.68" x2="19.05" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R17" gate="G$1" pin="2"/>
@@ -15459,9 +15449,9 @@ distributor RS 193-8861887</description>
 <label x="-198.12" y="-53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="LED4" gate="G$1" pin="A"/>
-<wire x1="-29.21" y1="106.68" x2="-29.21" y2="110.49" width="0.1524" layer="91"/>
-<label x="-29.21" y="110.49" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="-41.91" y1="113.03" x2="-44.45" y2="113.03" width="0.1524" layer="91"/>
+<label x="-44.45" y="113.03" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -15854,7 +15844,7 @@ distributor RS 193-8861887</description>
 <segment>
 <pinref part="VT4" gate="G$1" pin="C"/>
 <pinref part="LED4" gate="G$1" pin="C"/>
-<wire x1="-29.21" y1="97.79" x2="-29.21" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-29.21" y1="97.79" x2="-29.21" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -15905,6 +15895,21 @@ distributor RS 193-8861887</description>
 <wire x1="-10.16" y1="-10.16" x2="-10.16" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="-12.7" x2="-17.78" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="C14" gate="G$1" pin="+"/>
+</segment>
+</net>
+<net name="N$36" class="0">
+<segment>
+<pinref part="R11" gate="G$1" pin="2"/>
+<pinref part="LED4" gate="G$1" pin="A"/>
+<wire x1="-31.75" y1="113.03" x2="-29.21" y2="113.03" width="0.1524" layer="91"/>
+<wire x1="-29.21" y1="113.03" x2="-29.21" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$45" class="0">
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<wire x1="31.75" y1="106.68" x2="31.75" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
