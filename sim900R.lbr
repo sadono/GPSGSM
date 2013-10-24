@@ -6,15 +6,15 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.001" unitdist="inch" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
@@ -57,10 +57,6 @@
 <library>
 <packages>
 <package name="SIM900">
-<wire x1="-12" y1="-12" x2="12" y2="-12" width="0.127" layer="21"/>
-<wire x1="12" y1="-12" x2="12" y2="12" width="0.127" layer="21"/>
-<wire x1="12" y1="12" x2="-12" y2="12" width="0.127" layer="21"/>
-<wire x1="-12" y1="12" x2="-12" y2="-12" width="0.127" layer="21"/>
 <wire x1="-9" y1="8" x2="-8" y2="8.5" width="0.15" layer="21"/>
 <wire x1="-8" y1="8.5" x2="-8" y2="7.5" width="0.15" layer="21"/>
 <wire x1="-8" y1="7.5" x2="-9" y2="8" width="0.15" layer="21"/>
@@ -192,6 +188,14 @@
 <wire x1="10.8" y1="-5.5" x2="13.2" y2="-5.5" width="0.127" layer="41"/>
 <wire x1="10.8" y1="-6.5" x2="13.2" y2="-6.5" width="0.127" layer="41"/>
 <wire x1="10.8" y1="-7.5" x2="13.2" y2="-7.5" width="0.127" layer="41"/>
+<wire x1="-12" y1="12" x2="-12" y2="9" width="0.127" layer="21"/>
+<wire x1="-9" y1="12" x2="-12" y2="12" width="0.127" layer="21"/>
+<wire x1="9" y1="12" x2="12" y2="12" width="0.127" layer="21"/>
+<wire x1="12" y1="12" x2="12" y2="9" width="0.127" layer="21"/>
+<wire x1="12" y1="-9" x2="12" y2="-12" width="0.127" layer="21"/>
+<wire x1="12" y1="-12" x2="9" y2="-12" width="0.127" layer="21"/>
+<wire x1="-12" y1="-9" x2="-12" y2="-12" width="0.127" layer="21"/>
+<wire x1="-12" y1="-12" x2="-9" y2="-12" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
