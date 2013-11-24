@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -3039,7 +3039,7 @@ distributor RS 193-8861</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="SeeedStudio_DRU_no_angle_20130527">
+<designrules name="ITEADstudio_DRC">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -3056,9 +3056,9 @@ necessary adjustments and save your customized
 design rules under a new name.</description>
 <description language="zh">&lt;b&gt;Seeed Studio EAGLE Design Rules&lt;/b&gt;
 </description>
-<param name="layerSetup" value="(1*2*15*16)"/>
-<param name="mtCopper" value="0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm"/>
-<param name="mtIsolate" value="0.2mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="layerSetup" value="(1*16)"/>
+<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
 <param name="mdWireWire" value="6mil"/>
 <param name="mdWirePad" value="6mil"/>
 <param name="mdWireVia" value="6mil"/>
@@ -3084,11 +3084,11 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="6mil"/>
+<param name="rlMinPadTop" value="10mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="6mil"/>
+<param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="6mil"/>
+<param name="rlMinPadBottom" value="10mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
 <param name="rlMinViaOuter" value="6mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
@@ -3109,7 +3109,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="2mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="25mil"/>
+<param name="mlViaStopLimit" value="100mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -3220,14 +3220,14 @@ design rules under a new name.</description>
 <elements>
 <element name="IC2" library="vreg-pulse (1)" package="HSOP8" value="ST1S10PHR" x="54.55" y="30.55" smashed="yes">
 <attribute name="VALUE" x="58.487" y="28.518" size="1.27" layer="27" ratio="18" rot="R90"/>
-<attribute name="NAME" x="58.171" y="31.355" size="0.8128" layer="25" ratio="18" rot="R270"/>
+<attribute name="NAME" x="57.471" y="31.355" size="0.8128" layer="25" ratio="18" rot="R270"/>
 </element>
 <element name="C1" library="resistor" package="C0805" value="10u" x="57.165" y="36.0425" smashed="yes">
 <attribute name="NAME" x="59.076" y="35.5585" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="56.276" y="33.7565" size="1.27" layer="27"/>
 </element>
 <element name="C10" library="resistor" package="C0805" value="22u" x="49.9275" y="44.4525" smashed="yes">
-<attribute name="NAME" x="46.0385" y="44.2685" size="0.8128" layer="25"/>
+<attribute name="NAME" x="45.5385" y="44.2685" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="49.0385" y="42.1665" size="1.27" layer="27"/>
 </element>
 <element name="C2" library="resistor" package="C0805" value="4.7u" x="52.21" y="24.87" smashed="yes" rot="R180">
@@ -3362,7 +3362,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="74.5785" y="38.6835" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C7" library="resistor" package="C0805" value="1u" x="82.095" y="39.51" smashed="yes" rot="R90">
-<attribute name="NAME" x="82.779" y="42.279" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="82.884" y="42.309" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="84.381" y="38.621" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="SV1" library="con-lstb" package="MA04-1" value="" x="72.7575" y="12.75" smashed="yes" rot="R180">
@@ -3414,7 +3414,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="49.796" y="12.987" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="IC3" library="TI-bq24075" package="QFN16" value="BQ24072" x="54.5535" y="8.2845" smashed="yes" rot="R90">
-<attribute name="NAME" x="55.3155" y="5.9535" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="55.5155" y="11.4535" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="58.0535" y="6.2845" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C3" library="resistor" package="C0805" value="1u" x="47.538" y="8.5485" smashed="yes" rot="R270">
@@ -3459,7 +3459,7 @@ design rules under a new name.</description>
 <attribute name="MPN" value="" x="87.1" y="42.3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="87.1" y="42.3" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="87.1" y="42.3" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="92.455" y="41.36" size="0.8128" layer="25" rot="R90"/>
+<attribute name="NAME" x="92.24" y="42.455" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="92.815" y="39.125" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="X2" library="coaxCon" package="ST-SMB-H" value="ST-SMB-H" x="24.6" y="42.3" smashed="yes" rot="R90">
@@ -4163,10 +4163,9 @@ design rules under a new name.</description>
 <via x="8.25" y="16.1" extent="1-16" drill="0.6"/>
 <via x="9.65" y="17.5" extent="1-16" drill="0.6"/>
 <via x="9.65" y="16.1" extent="1-16" drill="0.6"/>
-<via x="56.6" y="30.5" extent="1-16" drill="0.6" alwaysstop="yes"/>
-<via x="52.6" y="30.5" extent="1-16" drill="0.6" alwaysstop="yes"/>
-<via x="53.95" y="30.5" extent="1-16" drill="0.6"/>
-<via x="55.3" y="30.5" extent="1-16" drill="0.6"/>
+<via x="53.3" y="30.5" extent="1-16" drill="0.6" alwaysstop="yes"/>
+<via x="54.65" y="30.5" extent="1-16" drill="0.6"/>
+<via x="56" y="30.5" extent="1-16" drill="0.6"/>
 <via x="51.2" y="30.5" extent="1-16" drill="0.6"/>
 <wire x1="52.1" y1="30.55" x2="57.45" y2="30.55" width="2.54" layer="1"/>
 <wire x1="30.605" y1="32.295" x2="30.605" y2="30.295" width="0.3048" layer="1"/>
@@ -4239,7 +4238,6 @@ design rules under a new name.</description>
 <via x="44.8" y="4.3" extent="1-16" drill="0.6"/>
 <via x="44.8" y="5.6" extent="1-16" drill="0.6"/>
 <via x="44.8" y="6.9" extent="1-16" drill="0.6"/>
-<wire x1="36.605" y1="22.295" x2="36.605" y2="23.295" width="0" layer="19" extent="1-1"/>
 <via x="40" y="27" extent="1-16" drill="0.6"/>
 <via x="40" y="28.5" extent="1-16" drill="0.6"/>
 <via x="40" y="30" extent="1-16" drill="0.6"/>
@@ -4253,6 +4251,7 @@ design rules under a new name.</description>
 <via x="61.5" y="38.5" extent="1-16" drill="0.6"/>
 <via x="61.5" y="36.5" extent="1-16" drill="0.6"/>
 <via x="61.5" y="34.5" extent="1-16" drill="0.6"/>
+<wire x1="36.605" y1="22.295" x2="36.605" y2="23.295" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$40">
 </signal>

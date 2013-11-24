@@ -20,7 +20,7 @@ UsedLibrary="ICA-501.lbr"
 [Win_1]
 Type="Control Panel"
 Loc="141 215 1030 780"
-State=1
+State=3
 Number=0
 
 [Desktop]
