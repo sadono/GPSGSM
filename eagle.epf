@@ -9,18 +9,12 @@ Desktop="Desktop"
 AutoSaveProject=1
 UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/rcl.lbr"
 UsedLibrary="vreg-pulse (1).lbr"
-UsedLibrary="CDRH6D38.lbr"
-UsedLibrary="sim900R.lbr"
-UsedLibrary="con-molex-sim.lbr"
-UsedLibrary="sim68.lbr"
-UsedLibrary="con-lstb.lbr"
-UsedLibrary="pinhead.lbr"
-UsedLibrary="ICA-501.lbr"
+UsedLibrary="coaxCon.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="141 215 1030 780"
-State=3
+Loc="8 198 897 763"
+State=2
 Number=0
 
 [Desktop]
