@@ -7,13 +7,13 @@ Desktop="Desktop"
 
 [Globals]
 AutoSaveProject=1
-UsedLibrary="C:/Program Files (x86)/EAGLE-6.5.0/lbr/rcl.lbr"
 UsedLibrary="vreg-pulse (1).lbr"
 UsedLibrary="coaxCon.lbr"
+UsedLibrary="pinhead.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="8 198 897 763"
+Loc="569 0 1168 399"
 State=2
 Number=0
 
